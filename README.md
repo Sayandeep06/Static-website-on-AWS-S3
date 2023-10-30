@@ -1,6 +1,6 @@
 # Hosting a Static Website on AWS S3 - 
 
-Welcome to the "One Hour Project" where you'll learn how to host a static website using Amazon Web Services (AWS) Simple Storage Service (S3). In just one hour, you'll be able to deploy a website without the need for complex databases or backends. AWS S3's Free Tier offers an excellent solution for this purpose, providing scalability and high availability.
+AWS S3 is perfect for hosting static websites that only include HTML, CSS, and JavaScript files that require no server-side processing. I deployed a static website to AWS S3 storage service in this project. An S3 bucket was created and configured  for website hosting, secured using IAM policies. Next, I uploaded the website files to your bucket. Lastly, accessed the website in a browser using the unique S3 endpoint.
 
 ## Why Use AWS S3 for Hosting?
 
@@ -22,40 +22,40 @@ Many companies and individuals require a website, and most of these websites don
 
 7. Access your static website via the S3 bucket's URL or your custom domain.
 
-## Prerequisites
-
-Before you begin, ensure you have the following:
-
-- An AWS account (or you can sign up for one).
-
-- Your website files in HTML, CSS, and JavaScript.
 
 ## Getting Started
 
-Follow these steps to host your static website on AWS S3:
+Steps to host the static website on AWS S3:
 
-1. **Create an AWS Account**: If you don't have one, sign up for an AWS account at [AWS Management Console](https://aws.amazon.com/).
+1. **Created an AWS Account**: If you don't have one, sign up for an AWS account at [AWS Management Console](https://aws.amazon.com/).
 
-2. **Set Up Your S3 Bucket**: Create an S3 bucket to store your website files. Then uncheck all the options in the Block public access element of the bucket settings. Enable all public access
+2. **Set Up Your S3 Bucket**: Created an S3 bucket to store the website files. Then unchecked all the options in the Block public access element of the bucket settings. Enabled all public access
  ![Screenshot from 2023-10-30 01-34-59](https://github.com/Sayandeep06/Static-website-on-AWS-S3/assets/100061797/174cd3e7-1140-4cc1-a1bf-a38da7d28cbf)
 
 
-3. **Configure Static Website Hosting**: Enable static website hosting on your S3 bucket and set the default index and error documents.
+3. **Configure Static Website Hosting**: Enabled static website hosting on your S3 bucket from properties and set the default index as index.html and error document as error.html.![Screenshot from 2023-10-30 01-33-16](https://github.com/Sayandeep06/Static-website-on-AWS-S3/assets/100061797/c9274945-9e0b-4a54-a7de-65a987b93f1c)
 
-4. **Manage Access**: Use AWS IAM to secure access to your S3 bucket.
 
-5. **Upload Your Website**: Upload your website files to the S3 bucket using the AWS CLI or the AWS Management Console.
+4. **Manage Access**: Use AWS IAM to secure access to your S3 bucket. 
 
-6. **Custom Domain (Optional)**: If you want a custom domain, configure it using AWS Route 53.
+5. **Upload Your Website**: Upload your website files to the S3 bucket using the AWS CLI or the AWS Management Console.![Screenshot from 2023-10-30 02-00-21](https://github.com/Sayandeep06/Static-website-on-AWS-S3/assets/100061797/ca7a23fa-0a0b-4556-ae96-a8fe3769187a)
 
-7. **Access Your Website**: Your website will be available via the S3 bucket's URL or your custom domain (if set up).
 
-## Project Structure
+6. **Make your website files public**: Select all the files on S3 bucket created and click on actions. Then make them public![Screenshot from 2023-10-30 01-54-56](https://github.com/Sayandeep06/Static-website-on-AWS-S3/assets/100061797/fcd0d394-468f-479f-beab-3f748470c8af)
 
-This repository includes:
 
-- `README.md`: This README file.
+7. **Access Your Website**: Your website will be available via the S3 bucket's endpoint URL or your custom domain. This is the link to my website setup on S3 http://staticnewwebsite.s3-website.ap-south-1.amazonaws.com/ (the bucket is probably deleted now and won't be able to access)![Screenshot from 2023-10-30 01-41-08](https://github.com/Sayandeep06/Static-website-on-AWS-S3/assets/100061797/1a642ba1-bce5-43c2-a8f3-33fc9f787e5b) ![Screenshot from 2023-10-30 01-41-15](https://github.com/Sayandeep06/Static-website-on-AWS-S3/assets/100061797/f0c93d68-abd0-4d23-b704-f11e05e82e5f)
+  
+8. **Enable versioning**: From the properties tab enable versioning to make any changes to the website. The new file uploaded as an update must be made public explicitly and if you wanna revert back to the previous version, just delete the update file.![Screenshot from 2023-10-30 01-47-57](https://github.com/Sayandeep06/Static-website-on-AWS-S3/assets/100061797/0ad71f77-2e6f-4707-8344-9613396d4de2)
 
-Start hosting your static website on AWS S3 in just one hour and take advantage of AWS's scalability and availability!
+## Key takeaways 
+I was able to understand how AWS S3's main components work and how to use them to create and upload our static website.
 
-Happy hosting!
+Learned how to configure AWS S3 to host a static website, configure main pages, and error pages, and see website endpoint, in any region around the world.
+
+Was able to set the right permissions and security configurations to make our static website public and available for all internet users.
+
+Configured versioning for our static website, made updates, and rolled back updates.
+
+
+
