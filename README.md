@@ -36,7 +36,9 @@ Follow these steps to host your static website on AWS S3:
 
 1. **Create an AWS Account**: If you don't have one, sign up for an AWS account at [AWS Management Console](https://aws.amazon.com/).
 
-2. **Set Up Your S3 Bucket**: Create an S3 bucket to store your website files.
+2. **Set Up Your S3 Bucket**: Create an S3 bucket to store your website files. Then uncheck all the options in the Block public access element of the bucket settings. Enable all public access
+ ![Screenshot from 2023-10-30 01-34-59](https://github.com/Sayandeep06/Static-website-on-AWS-S3/assets/100061797/174cd3e7-1140-4cc1-a1bf-a38da7d28cbf)
+
 
 3. **Configure Static Website Hosting**: Enable static website hosting on your S3 bucket and set the default index and error documents.
 
@@ -53,15 +55,6 @@ Follow these steps to host your static website on AWS S3:
 This repository includes:
 
 - `README.md`: This README file.
-- `LICENSE`: The project's license information (if applicable).
-
-## License
-
-This project is open-source and available under the MIT License. You can find the details in the [LICENSE](LICENSE) file.
-
-## Support
-
-If you encounter any issues or need assistance with this project, feel free to contact us at [your-email@example.com](mailto:your-email@example.com).
 
 Start hosting your static website on AWS S3 in just one hour and take advantage of AWS's scalability and availability!
 
